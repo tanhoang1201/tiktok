@@ -3,7 +3,11 @@
 @tailwind utilities;
 
 @layer base {
-    h1 {
-        @apply text-2xl font-extrabold;
-    }
+	h1 {
+		@apply text-2xl font-extrabold;
+	}
+
+	.searchInp:not(:placeholder-shown) ~ .searchBtn svg {
+		@apply fill-[#161823bf];
+	}
 }
