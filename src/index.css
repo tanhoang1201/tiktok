@@ -3,11 +3,44 @@
 @tailwind utilities;
 
 @layer base {
-	h1 {
-		@apply text-2xl font-extrabold;
-	}
+    h1 {
+        @apply text-2xl font-extrabold;
+    }
 
-	.searchInp:not(:placeholder-shown) ~ .searchBtn svg {
-		@apply fill-[#161823bf];
-	}
+    .searchInp:not(:placeholder-shown) ~ .searchBtn svg {
+        @apply fill-[#161823bf];
+    }
+
+    .separate {
+        @apply border-t-[1px] border-solid border-border;
+    }
+}
+
+@layer components {
+    .btn {
+    }
+
+    .primary {
+        @apply bg-primaryRed font-bold text-[#fff] rounded text-base px-2;
+    }
+}
+
+body .tippy-box {
+    border-radius: 8px;
+    background-color: #545454eb;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+body .tippy-arrow {
+    color: #545454eb;
+}
+
+body .tippy-content {
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+body .tippy-box[data-placement^="bottom"] > .tippy-arrow:before {
+    top: -8px;
 }
