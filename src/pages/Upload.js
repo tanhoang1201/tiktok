@@ -1,14 +1,13 @@
-import Header from "../layouts/Header";
+import HeaderOnly from "../layouts/HeaderOnly";
 
-function Upload({ children }) {
-    return (
-        <div>
-            <div className="shadow-md">
-                <Header />
-            </div>
-            <div>{children}</div>
-        </div>
-    );
+function Upload() {
+	return (
+		<HeaderOnly>
+			<div>
+				<h1>Upload</h1>
+			</div>
+		</HeaderOnly>
+	);
 }
 
 export default Upload;
